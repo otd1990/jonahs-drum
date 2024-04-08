@@ -56,3 +56,29 @@
     grid-area: 10 / 2 / 7 / 7;
   }
 }
+
+@media (max-width: 460px) {
+  .colours-wrapper {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  .div0 {
+    display: none;
+  }
+  .div1 {
+    display: none;
+  }
+  .div2 {
+    grid-area: 2 / 1 / 2 / 2;
+  }
+  .div3 {
+    grid-area: 1 / 1 / 1 / 1;
+  }
+  .div4 {
+    display: none;
+  }
+  .div5 {
+    display: none;
+  }
+}

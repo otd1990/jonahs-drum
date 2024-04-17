@@ -82,3 +82,20 @@
     display: none;
   }
 }
+
+.fullscreen-button {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  padding: 1rem;
+  border-radius: 4px;
+  border: 1px solid #9c9a9a;
+  background-color: #fff;
+  cursor: pointer;
+  min-width: 130px;
+}
+
+.fullscreen-button:hover {
+  background-color: #9c9a9a;
+  color: #f9f9f9;
+}

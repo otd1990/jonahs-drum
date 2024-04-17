@@ -4,6 +4,7 @@ import "./App.css";
 function App() {
   const [clickedColourIndex, setClickedColourIndex] = useState(null);
   const [playing, setPlaying] = useState(false);
+  const [fullscreen, setFullScreen] = useState(false);
 
   const sounds = [
     {
@@ -123,6 +124,16 @@ function App() {
     [play]
   );
 
+  const handleFullscreen = () => {
+    if (!fullscreen) {
+      document.documentElement.requestFullscreen();
+    } else {
+      document.exitFullscreen();
+    }
+
+    setFullScreen(!fullscreen);
+  };
+
   return (
     <div className="App">
       <div className="colours-wrapper">
@@ -142,6 +153,15 @@ function App() {
           );
         })}
       </div>
+      <button
+        onClick={handleFullscreen}
+        className={`fullscreen-button ${
+          fullscreen ? "showing-fullscreen" : ""
+        }`}
+        aria-label={fullscreen ? "Exit Full Screen" : "Full Screen"}
+      >
+        {fullscreen ? "Exit Full Screen" : "Full Screen"}
+      </button>
     </div>
   );
 }
